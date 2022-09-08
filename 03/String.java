@@ -62,8 +62,12 @@ System.out.println(String.format("I have %s cars.", "three")); // I have three c
 
 // 1. 정렬과 공백
 
-System.out.println(String.format("%10s", "hi)); // 전체 길이가 10개인 문자열 공간에서 대입되는 값을 오른쪽 정렬. 반대쪽은 %-10s
-                                 
+System.out.println(String.format("%10s", "hi")); //전체 길이가 10개인 문자열 공간에서 대입되는 값을 오른쪽 정렬. 반대쪽은 %-10s
+
+// 2. 소수점 표현
+
 System.out.println(String.format("%.4f", 3.141592)); // 소수점 자릿수 설정
-                                 
+
+// 3. printf()
+
 System.out.printf() // C언어 printf랑 비슷하게 사용가능
