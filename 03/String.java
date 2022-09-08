@@ -58,4 +58,12 @@ System.out.println(String.format("I have %d cars.", num)); // 위와 동일
 System.out.println(String.format("I have %s cars.", "three")); // I have three cars
 
 
+/* 포맷 코드와 숫자 함께 사용하기 */
 
+// 1. 정렬과 공백
+
+System.out.println(String.format("%10s", "hi)); // 전체 길이가 10개인 문자열 공간에서 대입되는 값을 오른쪽 정렬. 반대쪽은 %-10s
+                                 
+System.out.println(String.format("%.4f", 3.141592)); // 소수점 자릿수 설정
+                                 
+System.out.printf() // C언어 printf랑 비슷하게 사용가능
