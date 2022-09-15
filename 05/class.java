@@ -19,3 +19,20 @@ public class Sample {
   
 }
 
+// 객체 변수는 공유되지 않는다!
+
+public class Sample {
+  public static void main(String[] args) {
+    
+    Animal cat = new Animal();
+    Animal dog = new Animal();
+    
+    cat.setName("kitty");
+    dog.setName("doggy");
+    
+    System.out.println(cat.name); // kitty
+    System.out.println(dog.name); // doggy
+    
+  }
+  
+}
