@@ -62,7 +62,7 @@ class FoolException extends RuntimeException {
 public class Sample {
     public void sayNick(String nick) {
         if("fool".equals(nick)) {
-            throw new FoolException();
+            throw new FoolException(); // throw : 강제로 예외 발생.
         }
         System.out.println("당신의 별명은 "+nick+" 입니다.");
     }
@@ -98,3 +98,26 @@ public class Sample {
     }
 }
 
+// 함수를 호출한 곳에서 예외처리하도록 : throws.
+
+class FoolException extends Exception {
+}
+
+public class Sample {
+    public void sayNick(String nick) throws FoolException { // 함수를 호출한 main에서 예외를 처리하도록 함.
+        if("fool".equals(nick)) {
+            throw new FoolException();
+        }
+        System.out.println("당신의 별명은 "+nick+" 입니다.");
+    }
+
+    public static void main(String[] args) {
+        Sample sample = new Sample();
+        try {
+            sample.sayNick("fool");
+            sample.sayNick("genious");
+        } catch (FoolException e) { // main에서 예외를 catch
+            System.err.println("FoolException이 발생했습니다.");
+        }
+    }
+}
